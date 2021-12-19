@@ -10,6 +10,15 @@ export class GamesService {
     return this.prisma.game.findMany();
   }
 
+  async findRandom(): Promise<Game> {
+    const count = await this.prisma.game.count();
+    const skip = Math.max(0, Math.floor(Math.random() * count) - 1);
+    return this.prisma.game.findFirst({
+      take: 1,
+      skip,
+    });
+  }
+
   findOne(id: string): Promise<Game | null> {
     return this.prisma.game.findFirst({
       where: { id },
