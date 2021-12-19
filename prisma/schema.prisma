@@ -11,17 +11,19 @@ datasource db {
 }
 
 model Game {
-  id                    String  @id             // nsuid_txt[0]
+  id                    String  @id             // product_code_ss[0]
   title                 String                  // title
   description           String?                 // excerpt
   image                 String                  // image_url_sq_s
   cover                 String                  // image_url_h2x1_s
   rating                Int                     // age_rating_sorting_i
+  prettyRating          String                  // pretty_agerating_s
   url                   String                  // url
   hasDemo               Boolean @default(false) // demo_availability
   hasDigitalVersion     Boolean @default(true)  // digital_version_b
   hasPhysicalVersion    Boolean @default(true)  // physical_version_b
-  publisher             String                  // publisher
+  publisher             String?                 // publisher
   dateReleased          DateTime                // date_from
+  prettyDateReleased    String                  // pretty_date_s
   dateUpdated           DateTime?               // change_date
 }
