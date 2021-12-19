@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+  id                    String  @id             // nsuid_txt[0]
+  title                 String                  // title
+  description           String?                 // excerpt
+  image                 String                  // image_url_sq_s
+  cover                 String                  // image_url_h2x1_s
+  rating                Int                     // age_rating_sorting_i
+  url                   String                  // url
+  hasDemo               Boolean @default(false) // demo_availability
+  hasDigitalVersion     Boolean @default(true)  // digital_version_b
+  hasPhysicalVersion    Boolean @default(true)  // physical_version_b
+  publisher             String                  // publisher
+  dateReleased          DateTime                // date_from
+  dateUpdated           DateTime?               // change_date
+}
