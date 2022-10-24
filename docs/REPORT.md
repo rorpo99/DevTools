@@ -26,4 +26,19 @@ git log
 Используем **git log -L 32,32:prisma/seed.ts**
 ![img_3.png](img_3.png)
 
+###5
+Используем последовательность команд:\
+git bisect start \
+git bisect bad  \
+git bisect good 8673a61216986f4401c85c1b8448488911c2c678 \
+git bisect run npm run test \
+В качестве коммита, в котором нет ошибки указываем первый коммит.
+
+![img_4.png](img_4.png)
+
+Получили такой результат, теперь по строке, с помощью  **git log -S "Hello Universe!" --source --all**, найдем коммит, который приводит к ошибке.
+![img_5.png](img_5.png)
+
+Чтобы закончить поиск - **git bisect reset**
+
 
