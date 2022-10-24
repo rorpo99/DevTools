@@ -48,4 +48,9 @@ git bisect run npm run test \
 
 После удалим бэкапы всех веток **git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d**
 
+###7
+Выполним **git filter-branch --env-filter "GIT_AUTHOR_NAME='Sofia Vyatkina' GIT_AUTHOR_EMAIL='sonia.vyatkina@gmail.com'" feature**
+![img_7.png](img_7.png)
+Видим, что информация в коммитах изменилась.
+
 
