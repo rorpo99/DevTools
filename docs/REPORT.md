@@ -13,3 +13,13 @@ git merge ci \
 git branch -d ci \
 git log 
 ![img_1.png](img_1.png)
+
+При rebase в интерактивном режиме у первого коммита оставляем pick, у всех остальных меняем pick на squash.
+
+###3
+С помощью команды **git log --reflog --graph** смотрим на граф и ищём несвязный с ним. 
+![img_2.png](img_2.png) \
+Создаём ветку на основе посднего коммита\
+**git branch old-master aae7df3ec8096a0815f04212b809db7a0dbddd27**
+
+
