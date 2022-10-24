@@ -41,4 +41,11 @@ git bisect run npm run test \
 
 Чтобы закончить поиск - **git bisect reset**
 
+###6
+Перед тем как удалять .env, добавим его в .gitignore \
+Командой **git filter-branch --prune-empty --index-filter "git rm --cached --ignore-unmatch .env" -- --all** перепишем коммиты.
+![img_6.png](img_6.png)
+
+После удалим бэкапы всех веток **git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d**
+
 
