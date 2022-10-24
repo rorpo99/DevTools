@@ -53,4 +53,11 @@ git bisect run npm run test \
 ![img_7.png](img_7.png)
 Видим, что информация в коммитах изменилась.
 
+###8
+Включим запоминание разрешений конфликтов **config rerere.enabled true** \
+Вливаем ветку feature в master и разрешаем конфликты.\
+Откатываем слияние  **git reset --soft HEAD~1**\
+Снова вливаем ветки, merge conflict решился автоматически.\
+![img_8.png](img_8.png)
+
 
