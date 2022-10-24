@@ -60,4 +60,13 @@ git bisect run npm run test \
 Снова вливаем ветки, merge conflict решился автоматически.\
 ![img_8.png](img_8.png)
 
+###9 10
+Используя команду **git fsck** получим
+![img_9.png](img_9.png)
+Далее посмтрим размеры папки .git 
+![img_10.png](img_10.png)
+Используя **git gc --aggressive --prune=now** "чистим" репозиторий
+![img_11.png](img_11.png)
+Снова смотрим размер папки .git и видим, что размер уменьшился
+![img_12.png](img_12.png)
 
