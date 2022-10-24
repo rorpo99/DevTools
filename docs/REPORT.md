@@ -22,4 +22,8 @@ git log
 Создаём ветку на основе посднего коммита\
 **git branch old-master aae7df3ec8096a0815f04212b809db7a0dbddd27**
 
+###4
+Используем **git log -L 32,32:prisma/seed.ts**
+![img_3.png](img_3.png)
+
 
